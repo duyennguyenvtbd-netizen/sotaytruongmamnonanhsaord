@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      // Cho phép đọc và ghi dữ liệu sổ tay Trường Mầm non Ánh Sao Phường Rạch Dừa
+      allow read, write: if true;
+    }
+  }
+}
